@@ -1,0 +1,491 @@
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Arte de Código Aberto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exposição Arte de Código Aberto - uma maneira convidativa para explorar o mundo da arte computacional e o código.">
+    <script type="text/javascript">
+      window.addEventListener("load", function () { document.querySelector('body').classList.add('loaded'); });
+    </script>
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
+  </head>
+  <body data-smooth-scroll-offset="73">
+    <div class="loader">
+      <div class="loading-animation"></div>
+    </div>
+    <div class="navbar-container ">
+      <nav class="navbar navbar-expand-lg navbar-dark" data-overlay data-sticky="top">
+        <div class="container">
+          <a class="navbar-brand fade-page" href="index.html">
+            Arte de Código Aberto
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="icon navbar-toggler-open" src="assets/img/icons/interface/menu.svg" alt="menu interface icon" data-inject-svg />
+            <img class="icon navbar-toggler-close" src="assets/img/icons/interface/cross.svg" alt="cross interface icon" data-inject-svg />
+          </button>
+          <div class="collapse navbar-collapse justify-content-end o-hidden">
+            <div class="py-2 py-lg-0">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <!--<li class="nav-item">
+                  <a class="nav-link" href="#virtual">Exposição Virtual</a>
+                </li>-->
+                <li class="nav-item">
+                  <a class="nav-link" href="#obras">Obras</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#aprender">Aprender</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#comunidade">Comunidade</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#glossario">Glossário</a>
+                </li>
+              </ul>
+            </div>
+            <a href="https://bileto.sympla.com.br/event/78939/d/234224" target="_blank" class="btn btn-white ml-lg-3">Ingressos</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div data-overlay class="bg-primary text-light min-vh-70 o-hidden position-relative">
+      <div class="position-absolute w-100 min-vh-70 o-hidden top-0">
+          <canvas id="canvas1" alt="Logo animado da exposição Arte de Código Aberto"></canvas>
+      </div>
+      <div class="divider position-absolute w-100" style="bottom: 0px; top: auto">
+        <img src="assets/img/dividers/divider-2.svg" alt="graphical divider" data-inject-svg />
+      </div>
+    </div>
+    <section class="text-center" id="sobre">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-9">
+            <h2 class="h1">Sobre a exposição</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col">
+            <p>Arte de Código Aberto propõe uma jornada no mundo da arte gerativa, onde o público é convidado a mergulhar na intersecção entre linguagem de programação e expressão artística. Esta exposição individual do artista-programador Vamoss nos mostra como os códigos abertos podem ser manipulados para criar imagens e ideias.</p>
+            <p>A mostra, que já encantou visitantes no espaço ACT do Sesc Tijuca em 2022 e na Sala de Ciências do Sesc Madureira entre junho e setembro de 2023, agora marca sua presença no Laboratório de Atividades do Amanhã. Aqui, os visitantes têm a chance de experimentar a arte de forma interativa, criando suas próprias obras generativas e acessando o dinamismo entre ordem e caos.</p>
+            <p>Esta exposição não é apenas uma celebração da criatividade; ela desafia os visitantes a refletirem sobre presença e influência dos programas de computador em nossas vidas - desde dispositivos móveis até mídias sociais, afetando nossas emoções e comportamentos. Arte de Código Aberto é focada na interatividade, convidando os visitantes a se envolverem ativamente com a arte. A exposição é desenhada para incentivar que o público se envolva com os códigos e ver suas próprias criações ganharem vida. Essa interação proporciona uma compreensão mais profunda da relação entre arte, tecnologia e a sociedade.</p>
+            <div class="card card-body border-0 o-hidden mb-0 bg-secondary text-light">
+              <div class="position-relative d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="h3 text-center mb-md-0">Tempo restante para visitar a exposição</div>
+                <a href="https://bileto.sympla.com.br/event/78939/d/234224" target="_blank" data-countdown-date="2024/04/21" class="add-countdown-time btn btn-lg btn-white text-secondary">Retirar Ingressos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-center pt-0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-9">
+            <h2 class="h1">Sobre a artista</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col">
+            <p>Vamoss, artista-programador e Diretor de Tecnologia na SuperUber, é reconhecido por sua habilidade em usar código como matéria prima para criar projetos de arte gerativa. Com um background em Design, mestre em Economia Criativa pela ESPM-Rio e atual doutorando em Artes Visuais no PPGAV-UFRJ, ele tem se destacado na comunidade de artistas-programadores, trazendo um olhar inovador para a interseção entre arte e tecnologia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--
+    <section class="bg-primary-alt">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-6">
+          <div class="col-xl-8 col-lg-9">
+            <h2 class="display-4 mx-xl-6">Exposição Virtual</h2>
+            <p class="lead">
+              Lorem ipsum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+-->
+    
+    <section class="bg-primary-alt has-divider" id="obras">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-xl-8 col-lg-9">
+            <h2 class="display-4 mx-xl-6">Obras na exposição</h2>
+            <p class="lead">
+              As obras a seguir foram escolhidas por sua simplicidade no código, para possibilitar que as pessoas possam criar variações únicas.
+            </p>
+            <p>Cada imagem aponta para o OpenProcessing, uma rede social de arte feita em código, onde é além de ver os trabalhos dinâmicos, também alterar seu código.</p>
+          </div>
+        </div>
+      </div>
+      <div class="arrows-inside highlight-selected mb-6" data-flickity='{ "autoPlay": true, "imagesLoaded": true, "wrapAround": true }'>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/830633" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail830633@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Ritmologia (2020)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/1433484" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail1433484@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Visualização da Cópia em Flor (2021)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/1593074" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail1593074@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Visualização da Cópia em Microorganismos (2021)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/1617307" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail1617307@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Lugar Código (2022)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/738615" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail738615@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Flor Lunar (2019)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/744884" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail744884@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Padrões Hexagonais (2019)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/830365" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail830365@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Confusão (2016)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/1333892" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail1333892@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Neve Tropical (2021)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/1354838" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail1354838@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Espaços Criativos (2021)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/1602696" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail1602696@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Resiliência (2022)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/1616492" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail1616492@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>╔╣╠╗ (2017)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/869572" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail869572@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Loucura (2020)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/1618423" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail1618423@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Experimento Gerativo (2016)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/1618424" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail1618424@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Opinião (2022)</div>
+          </a>
+        </div>
+        <div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+          <a href="https://openprocessing.org/sketch/2090595" target="_blank">
+            <img src="assets/img/artworks/visualThumbnail2090595@2x.jpg" alt="" class="rounded shadow-3d hover-shadow-3d">
+            <div>Physarum (2022)</div>
+          </a>
+        </div>
+      </div>
+      <div class="divider">
+        <img src="assets/img/dividers/divider-2.svg" alt="divisor" data-inject-svg />
+      </div>
+    </section>
+
+    <section class="has-divider" id="aprender">
+      <div class="container pb-0">
+        <div class="row justify-content-center text-center">
+          <div class="col-xl-8 col-lg-9">
+            <h2 class="display-4 mx-xl-6">Aprenda<br>Programação Criativa</h2>
+            <p class="lead">
+              A Programação Criativa explora a imaginação e a descoberta para criar imagens e áudios com código. É uma maneira leve e divertida de aprender programação.
+            </p>
+            <p>
+              Neste curso gratuito, você aprenderá os fundamentos da Programação Criativa em 5 horas. Você pode assistir quando quiser e ainda ganha um certificado ao concluir.
+            </p>
+            <p>
+              <a href="https://coliga.digital/cursos/programacao-criativa-arte-feita-em-codigo" target="_blank" class="btn btn-lg btn-primary lg-3 mt-3">Faça o Curso Introdutório</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="divider">
+        <img class="bg-primary" src="assets/img/dividers/divider-2.svg" alt="divisor" data-inject-svg />
+      </div>
+    </section>
+    
+    <section class="bg-primary has-divider" id="comunidade">
+      <div class="container pb-0">
+        <div class="row text-light mb-4">
+          <div class="col">
+            <h3 class="h1">Conecte-se</h3>
+            <p class="lead">
+              Comunidade Brasileira de Programação Criativa
+            </p>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://encontrosdigitais.com.br/" target="_blank" class="card card-sm card-body flex-row align-items-center fade-page hover-shadow-3d">
+              <img class="icon icon-lg bg-primary-2" src="assets/img/icons/social/person.svg" alt="icon" data-inject-svg />
+              <div class="ml-3">
+                <h5 class="mb-0">Encontros Digitais</h5>
+                <span>Comunidade de aprendizado em Artes e Novas Tecnologias</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://garoa.net.br/wiki/Noite_de_Processing" target="_blank" class="card card-sm card-body flex-row align-items-center fade-page hover-shadow-3d">
+              <img class="icon icon-lg bg-primary-2" src="assets/img/icons/social/moon-fill.svg" alt="icon" data-inject-svg />
+              <div class="ml-3">
+                <h5 class="mb-0">Noites de Processing</h5>
+                <span>Transmissões mensais com palestras, oficinas e debates</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="https://pcd.encontrosdigitais.com.br/" target="_blank" class="card card-sm card-body flex-row align-items-center fade-page hover-shadow-3d">
+              <img class="icon icon-lg bg-primary-2" src="assets/img/icons/social/heart-fill.svg" alt="icon" data-inject-svg />
+              <div class="ml-3">
+                <h5 class="mb-0">Processing Community Day</h5>
+                <span>Evento anual organizado pela comunidade</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="https://www.instagram.com/processingbrasil/" target="_blank" class="card card-sm card-body flex-row align-items-center fade-page hover-shadow-3d">
+              <img class="icon icon-lg bg-primary-2" src="assets/img/icons/social/instagram.svg" alt="icon" data-inject-svg />
+              <div class="ml-3">
+                <h5 class="mb-0">Instagram Processing Community Day</h5>
+                <span>Divulgação da atividade da comunidade</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <a href="elements-video-backgrounds.html" target="_blank" class="card card-sm card-body flex-row align-items-center fade-page hover-shadow-3d">
+              <img class="icon icon-lg bg-primary-2" src="assets/img/icons/social/youtube.svg" alt="icon" data-inject-svg />
+              <div class="ml-3">
+                <h5 class="mb-0">YouTube Processing Community Day</h5>
+                <span>Aulas gravadas no Processing Community Day</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <a href="https://t.me/programacaocriativa" target="_blank" class="card card-sm card-body flex-row align-items-center fade-page hover-shadow-3d">
+              <img class="icon icon-lg bg-primary-2" src="assets/img/icons/social/telegram.svg" alt="icon" data-inject-svg />
+              <div class="ml-3">
+                <h5 class="mb-0">Telegram Programação Criativa</h5>
+                <span>Grupo de mensagens muito ativo</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="700">
+            <a href="https://groups.google.com/g/processing-brasil" target="_blank" class="card card-sm card-body flex-row align-items-center fade-page hover-shadow-3d">
+              <img class="icon icon-lg bg-primary-2" src="assets/img/icons/social/envelope.svg" alt="icon" data-inject-svg />
+              <div class="ml-3">
+                <h5 class="mb-0">Google Groups</h5>
+                <span>Lista de e-mail sobre Processing</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div class="divider">
+        <img class="bg-secondary" src="assets/img/dividers/divider-2.svg" alt="divisor" data-inject-svg />
+      </div>
+    </section>
+    
+    <section class="bg-secondary text-light has-divider" id="glossario">
+      <div class="container pb-0">
+        <div class="row text-light mb-4">
+          <div class="col">
+            <h3 class="h1">Glossário da Arte de Código Aberto</h3>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <h5>Arte de Código Aberto</h5>
+              <div>Uma produção artística de base algorítmica que permite ser modificada desde o seu código-fonte, não apenas pelo artista criador, mas também pelo público.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <h5>Algoritmo</h5>
+              <div>Conjunto de passos que um programa de computador executa para realizar uma tarefa específica.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <h5>Regras</h5>
+              <div>Instruções que definem o funcionamento dos algoritmos.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div>
+              <h5>Sistemas</h5>
+              <div>Conjuntos de regras.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
+            <div>
+              <h5>Sistemas Autônomos</h5>
+              <div>Sistemas criados com regras cujo resultado não dependem da vontade de quem os criou.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="600">
+            <div>
+              <h5>Aleatoriedade</h5>
+              <div>Regras com resultados imprevisíveis.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="700">
+            <div>
+              <h5>Arte Gerativa</h5>
+              <div>Arte feita com sistemas autônomos. Geralmente, utiliza a aleatoriedade para criar.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="800">
+            <div>
+              <h5>Programação Criativa</h5>
+              <div>Abordagem que utiliza código para criar expressões artísticas, visuais e interativas. Combinação de programação e arte para explorar novas formas de se expressar e questionar.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="900">
+            <div>
+              <h5>Grade (Grid)</h5>
+              <div>Estrutura bidimensional composta por linhas e colunas que organiza elementos em uma grade. É frequentemente usado para posicionar e organizar objetos na tela.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="1000">
+            <div>
+              <h5>Padrões</h5>
+              <div>Arranjos visuais ou repetições organizadas de elementos. Em arte gerativa, padrões podem ser criados usando algoritmos para gerar composições visuais interessantes e complexas.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="1100">
+            <div>
+              <h5>JavaScript</h5>
+              <div>Linguagem de programação muito utilizada para criar páginas web interativas e dinâmicas.</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="1200">
+            <div>
+              <h5>p5.js</h5>
+              <div>Uma biblioteca <i>JavaScript</i> de código aberto para criação de gráficos e interações visuais.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="divider">
+        <img class="bg-primary" src="assets/img/dividers/divider-2.svg" alt="divisor" data-inject-svg />
+      </div>
+    </section>
+    
+    <footer class="pb-4 bg-primary text-light" id="footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col">
+            <h3 class="h3">Apresentação e Parceiros</h3>
+            <p class="lead">
+              A exposição Arte de Código Aberto é um projeto do Laboratório de Atividades do Amanhã (LAA), apresentado pelo Santander Brasil. A exposição conta com a concepção do artista- programador Vamoss e produção da Urano Educação e Cultura.
+            </p>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col">
+            <div class="card card-body border-0 o-hidden mb-0 bg-secondary text-light">
+              <div class="position-relative d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="h3 text-center mb-md-0">Venha conhecer a exposição no Museu do Amanhã</div>
+                <a href="https://bileto.sympla.com.br/event/78939/d/234224" target="_blank" class="btn btn-lg btn-white text-secondary">Retirar Ingressos</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </footer>
+    
+    <a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+      <img class="icon" src="assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
+    </a>
+    <!-- Required vendor scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+    <script type="text/javascript" src="assets/js/aos.js"></script>
+    <!-- Flickity (handles touch enabled carousels and sliders) -->
+    <script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <!-- jQuery Countdown (displays countdown text to a specified date) -->
+    <script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
+    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
+    <script type="text/javascript" src="assets/js/scrollMonitor.js"></script>
+    <!-- Smooth scroll (animation to links in-page)-->
+    <script type="text/javascript" src="assets/js/smooth-scroll.polyfills.min.js"></script>
+    <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
+    <script type="text/javascript" src="assets/js/svg-injector.min.js"></script>
+    <!-- p5js -->
+    <script type="text/javascript" src="assets/js/p5.min.js"></script>
+    <script type="text/javascript" src="assets/js/anime.min.js"></script>
+    <script type="text/javascript" src="assets/js/sketch.js"></script>
+    <!-- Required theme scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+
+  </body>
+
+</html>
